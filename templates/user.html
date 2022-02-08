@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ super() }}
+    {% if user and user['name'] %}
+        - Страница пользователя {{ user['name'] }}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <h1>
+        {% if user and user['name'] %}
+            Страница пользователя {{ user['name'] }}
+        {% else %}
+            Страница неизвествного пользователя
+        {% endif %}
+    </h1>
+{% endblock %}
