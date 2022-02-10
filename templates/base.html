@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Фреймворк Flask{% endblock %}</title>
+    {% block scripts %}
+        {{ moment.include_moment() }}
+    {% endblock %}
 </head>
 <body>
 {% block content %}{% endblock %}

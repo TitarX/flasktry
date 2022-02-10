@@ -2,6 +2,25 @@
 
 {% block title %}{{ super() }} - Главная страница{% endblock %}
 
+{% block scripts %}
+    {{ super() }}
+{% endblock %}
+
 {% block content %}
     <h1>Главная страница</h1>
+    <div>
+        <p>
+            <a href="{{ url_for('user', name='Виктор', external=True) }}">Страница пользователя Виктор</a>
+        </p>
+    </div>
+    <div>
+        <p>
+            <img src="{{ url_for('static', filename='img/action_0004.jpg') }}" alt="Изображение">
+        </p>
+    </div>
+    <div>
+        {{ moment.lang('ru') }}
+        <p>{{ moment(current_time).format('LLL') }}</p>
+        <p>{{ moment(current_time).fromNow(refresh=True) }}</p>
+    </div>
 {% endblock %}

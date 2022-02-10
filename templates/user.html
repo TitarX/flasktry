@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'bootstrap_base.html' %}
 
 {% block title %}
     {{ super() }}
@@ -7,7 +7,7 @@
     {% endif %}
 {% endblock %}
 
-{% block content %}
+{% block page_content %}
     <h1>
         {% if user and user['name'] %}
             Страница пользователя {{ user['name'] }}
