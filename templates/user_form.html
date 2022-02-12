@@ -1,0 +1,10 @@
+{% extends 'bootstrap_base.html' %}
+
+{% block page_content %}
+    {{ super() }}
+    <form action="" method="post">
+        {{ form.name.label }}
+        {{ form.name }}
+        {{ form.submit }}
+    </form>
+{% endblock %}

@@ -8,6 +8,7 @@
 {% endblock %}
 
 {% block page_content %}
+    {{ super() }}
     <h1>
         {% if user and user['name'] %}
             Страница пользователя {{ user['name'] }}
